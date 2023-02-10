@@ -6,7 +6,7 @@ export function CTA() {
             <form method="POST" action="https://forms.reform.app/headless/WR4x5f/arg-spanish-waitlist/c1zkky/submissions">
                 <div>
                     <input
-                        className="block mx-auto w-48 placeholder:text-slate-400 py-2 px-4 rounded-md mb-2"
+                        className="block mx-auto w-[340px] placeholder:text-slate-400 py-2 px-4 rounded-md mb-2"
                         type="email"
                         id="12c97b2c-36a9-4f3f-9afb-8ee39992c2cd"
                         name="answers[12c97b2c-36a9-4f3f-9afb-8ee39992c2cd]"
