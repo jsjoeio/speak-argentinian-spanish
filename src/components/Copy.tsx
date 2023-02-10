@@ -11,7 +11,7 @@ export function Copy() {
             <p className="mb-8">This isn't like a college textbook. This is the <strong>real deal</strong>.</p>
             <p className="mb-8">You’ll learn the best tips and tricks for improving your accent so you <em>pass for a native</em>.</p>
             <p className="text-center mt-16 mb-16 text-3xl leading-relaxed tracking-tight">👇 Hands-down, this is <br /><strong>the best course for<br />learning Argentinian Spanish</strong>.</p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside mb-8">
                 This course includes:
                 <li className="mt-2 mb-1">+10 hours of interactive video lessons</li>
                 <li className="mb-1">Access to private community of learners</li>
