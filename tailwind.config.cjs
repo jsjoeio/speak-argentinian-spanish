@@ -6,6 +6,7 @@ module.exports = {
 			colors: {
 				'arg-gold': '#B9944E',
 				'arg-gold-dark': '#8C7241',
+				'primary': '#222222'
 			}
 		},
 	},
