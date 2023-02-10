@@ -1,6 +1,6 @@
 export function CTA() {
     return (
-        <div className="text-center text-primary my-24">
+        <div id="cta" className="text-center text-primary my-24">
             <h3 className="text-5xl leading-relaxed tracking-tighter">Speak like a native</h3>
             <p className="text-sm mb-3">Reach your fluency goals 2x faster. Guaranteed.</p>
             <form method="POST" action="https://forms.reform.app/headless/WR4x5f/arg-spanish-waitlist/c1zkky/submissions">
