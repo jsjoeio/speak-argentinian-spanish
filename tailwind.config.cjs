@@ -4,8 +4,9 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				'arg-gold': '#B9944E',
+				'arg-gold': '#d3d359',
 				'arg-gold-dark': '#8C7241',
+				'arg-white': '#f2f2f2',
 				'primary': '#222222'
 			}
 		},

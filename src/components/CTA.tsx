@@ -14,7 +14,7 @@ export function CTA() {
                         required
                     />
                 </div>
-                <button className="text-center block bg-arg-gold b-arg-gold-dark text-black font-bold w-fit px-6 py-3 rounded-md mx-auto mt-4" type="submit">Join the waitlist</button>
+                <button className="capitalize text-center block bg-arg-white text-black font-bold w-fit px-6 py-3 rounded-md mx-auto mt-4" type="submit">Join the waitlist</button>
             </form >
         </div >
     )
