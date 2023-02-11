@@ -1,0 +1,31 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { About } from "../components/About";
+import { ThankYou } from "../components/ThankYou";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <main class="w-[32em] mx-auto max-w-full">
+            <ThankYou client:only="react" />
+        </main>
+        <Footer />
+        <style>
+            body {
+                text-color: #222222;
+                background: linear-gradient(
+                    319.51deg,
+                    #74b3cc 19.16%,
+                    #8ecae2 44.72%,
+                    #74b3cc 69.18%
+                );
+            }
+        </style>
+    </body>
+</html>
