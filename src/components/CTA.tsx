@@ -1,9 +1,21 @@
 export function CTA() {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        // Perform some action before submitting the form
+        // Update count in database
+        const resp = await fetch("/updateWaitlistTotal.json", {
+            method: "POST",
+        })
+
+        // Submit the form
+        event.target.submit();
+    };
     return (
         <div id="cta" className="text-center text-primary my-24">
             <h3 className="text-5xl leading-relaxed tracking-tighter">Speak like a native</h3>
             <p className="text-sm mb-3">Reach your fluency goals 2x faster. Guaranteed.</p>
-            <form method="POST" action="https://forms.reform.app/headless/WR4x5f/arg-spanish-waitlist/c1zkky/submissions">
+            <form method="POST" action="https://forms.reform.app/headless/WR4x5f/arg-spanish-waitlist/c1zkky/submissions" onSubmit={handleSubmit}>
                 <div>
                     <input
                         className="block mx-auto w-[340px] placeholder:text-slate-400 py-2 px-4 rounded-md mb-2"
