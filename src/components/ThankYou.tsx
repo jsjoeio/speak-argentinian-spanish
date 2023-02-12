@@ -27,13 +27,13 @@ export function ThankYou() {
         <p className="mb-8">It's great to have you on the waitlist. </p>
         <p className="mb-8">Once the waitlist has 100 signups, I will email you the course outline and ask for your feedback.</p>
 
-        {waitlistCount && (
+        {waitlistCount ? (
 
             <div>
                 <h2>Total Signups</h2>
                 <small>{waitlistCount}/100</small>
                 <progress className="progress w-full" value={waitlistCount} max="100"></progress>
             </div>
-        )}
+        ) : null}
     </div>
 }
