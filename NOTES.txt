@@ -1,0 +1,11 @@
+might be able to just copy styles from here:
+https://github.com/jsjoeio/joeprevite.com/blob/main/src/styles/global.css
+
+https://github.com/jsjoeio/joeprevite.com/blob/main/src/layouts/BlogPostLayout.astro
+
+actually seems like i can use this one:
+https://github.com/lancerossdev/basicblog/blob/4e9ff36f5a8826d87dc294c6b64e07447c029fc7/astro.config.ts
+
+https://github.com/lancerossdev/basicblog/blob/4e9ff36f5a8826d87dc294c6b64e07447c029fc7/src/layouts/BlogLayout.astro
+
+not sure though.
