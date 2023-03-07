@@ -63,6 +63,12 @@ Here's the list along with a brief description:
 - [Unicornio](https://www.youtube.com/@UnicornioPerro) - gamer
 - [Urbana Play 104.3 FM](https://www.youtube.com/@UrbanaPlayFM) - radio show
 - [YoMeAnimo!](https://www.youtube.com/@yomeanimo) - travel tips
+- [Paulina Cocina](https://youtube.com/@paulinacocina) - cooking show
+- [Damian Kuc](https://youtube.com/@DamianKucOficial) - history 
+- [dinosaur vlogs](https://www.youtube.com/@DinosaurVlogs)  - mystery
+- [Vicky Armida](https://youtube.com/@VickyArmida) - mystery
+- [Detrás del Dato](https://www.youtube.com/@DetrasdelDato) - history
+- [Sofi Maure][https://www.youtube.com/@SofiMaure] - vlogger
 
 
 ## How do I contribute?
