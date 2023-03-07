@@ -10,29 +10,27 @@ import { About } from "../components/About";
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<main class="w-[32em] mx-auto max-w-full">
-			<Hero />
-			<Copy />
-			<CTA client:visible />
-		</main>
-		<aside class="w-[32em] mx-auto max-w-full">
-			<About />
-		</aside>
-		<Footer />
-		<style>
-			body {
-				text-color: #222222;
-				background: linear-gradient(
-					319.51deg,
-					#74b3cc 19.16%,
-					#8ecae2 44.72%,
-					#74b3cc 69.18%
-				);
-			}
-		</style>
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main class="w-[32em] mx-auto max-w-full">
+      <Hero />
+      <Copy />
+      <CTA client:visible />
+    </main>
+    <aside class="w-[32em] mx-auto max-w-full">
+      <small class="block mb-8"
+        >*Technically speaking, "Argentinian Spanish" isn't a thing. At least if
+        you ask a linguist. What we really mean is something called <a
+          href="https://en.wikipedia.org/wiki/Rioplatense_Spanish"
+          >Rioplatense Spanish</a
+        > which is sometimes referred to as "Argentine Spanish" or "Argentinian Spanish"
+        in our case. It's used in places like Buenos Aires. This course will cover
+        other regional dialects of Argentina but focus on this one in particular.</small
+      >
+      <About />
+    </aside>
+    <Footer />
+  </body>
 </html>
