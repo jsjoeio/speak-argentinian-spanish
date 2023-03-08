@@ -68,8 +68,33 @@ Here's the list along with a brief description:
 - [dinosaur vlogs](https://www.youtube.com/@DinosaurVlogs)  - mystery
 - [Vicky Armida](https://youtube.com/@VickyArmida) - mystery
 - [Detrás del Dato](https://www.youtube.com/@DetrasdelDato) - history
-- [Sofi Maure][https://www.youtube.com/@SofiMaure] - vlogger
-
+- [Sofi Maure](https://www.youtube.com/@SofiMaure) - vlogger
+- [LESA](https://www.youtube.com/@Lesa) - history
+- [Ramiro Diz](https://youtube.com/@dizramiro) - Videos sobre autos generalmente nacionales y la cultura alrededor de algunos modelos
+- [Marcos Di Cesare](https://youtube.com/@MarcosDiCesare) - Pro chef, habla sobre cocina y cosas relacionadas desde su punto de vista, también enseña a cocinar
+- [Matias Jurisich](https://youtube.com/@matiasjurisich) - Barman, todo lo relacionado con bebidas (alcohólicas y no alcohólicas)
+- [Navaja Crimen](https://youtube.com/@matiasjurisich) - Se podría decir que es sobre medios audiovisuales pero hace lo que se le da la gana
+- [Pato Horneado](https://youtube.com/@PatoHorneado) - Gameplays
+- [AxlKss](https://youtube.com/@PatoHorneado) - Reviews/críticas de películas
+- [CoffeTV](https://youtube.com/@CoffeTV) - Reviews/críticas de películas y series
+- [Charlie Knight](https://youtube.com/@TheMrCharlieKnight) - Ensayos sobre guiones de películas
+- [Cosas del jardín](https://youtube.com/@CosasdelJardin) - El nombre lo dice
+- [Expediente Möbius](https://youtube.com/@expedientemobius) - Canal sobre música argentina
+- [Jota.](https://youtube.com/@Jota.) - Historia de videojuegos
+- [Kenai V Souza](https://youtube.com/@KenaiSouza) - Gameplays
+- [Leandro Gastón](https://youtube.com/@LeanGiottonini) - Charlas sobre historias/mitos/leyendas de argentina y también hace videos sobre el origen de palabras usadas acá, muy recomendados esos para los que quieren aprender español argentino
+- [LO QUE SE PESCA SE COME](https://youtube.com/@loquesepescasecome) - Videos sobre pesca y recetas con pescados locales
+- [Paz Baker](https://youtube.com/@pazbaker) - Rectas de repostería y pastelería
+- [Proyecto mueble](https://youtube.com/@pazbaker) - Carpintería
+- [Ruido Barilari](https://youtube.com/@RuidoBarilari) - Musica centrada en el bajo, ahora está con un podcast principalmente, es el hijo de Adrián Barilari, cantante de Rata Blanca
+- [Ultra Argentina](https://youtube.com/@UltraArgentina) - Videos sobre pueblos, países, historia y geografía
+- [Gente Rota](https://www.youtube.com/c/GabrielLucero) - Animations of crazy Whatsapp messages
+- [LESA](https://www.youtube.com/@Lesa/about) - The suburbs of Buenos Aires and recently more international adventures
+- [El señor de la 48](https://www.youtube.com/@Elsenordela48) - A guy who travels around in his VW Combi
+- [Paulina Cocina](https://www.youtube.com/user/paulinacocina) - Recipes and cooking
+- [Nico Astegiano](https://www.youtube.com/@NicoAstegiano/) - Music gear
+- [Rodriguez Galati](https://www.youtube.com/channel/UCfurPtvn7AE3mGltAevzdKQ) - Humor
+- [Martín Garabal](https://www.youtube.com/channel/UCfa9Gpzera_9WNOX0L8SnVA) - Humor
 
 ## How do I contribute?
 
