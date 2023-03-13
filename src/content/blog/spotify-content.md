@@ -32,6 +32,7 @@ Here's the list along with a brief description
 - [Sin Sucursal](https://open.spotify.com/show/5cibsOdQrcp0GHrzaDnZ0B) - fintech
 - [Toda Por La Tarde](https://open.spotify.com/show/799DVWQ8FCmHdcECWBoN4f) - technology
 - [Un Mundo Maravilloso](https://open.spotify.com/show/0zGFAX8zeYbDjEX4sC7bbk) - talk show
+- [¿Por qué no te habré hecho caso? con Santiago Siri y Hernán Zin](https://open.spotify.com/show/3uayw7As069jmVEqkA3Ds6?si=6352a5333f304e6a) - crypto
 
 
 
