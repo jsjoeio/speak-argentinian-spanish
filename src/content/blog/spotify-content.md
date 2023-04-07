@@ -33,8 +33,7 @@ Here's the list along with a brief description
 - [Toda Por La Tarde](https://open.spotify.com/show/799DVWQ8FCmHdcECWBoN4f) - technology
 - [Un Mundo Maravilloso](https://open.spotify.com/show/0zGFAX8zeYbDjEX4sC7bbk) - talk show
 - [¿Por qué no te habré hecho caso? con Santiago Siri y Hernán Zin](https://open.spotify.com/show/3uayw7As069jmVEqkA3Ds6?si=6352a5333f304e6a) - crypto
-
-
+- [Traé Spanish](https://open.spotify.com/show/2e9ywcRVRUdwqKckqdEO3j) - Rioplatense Spanish 
 
 ## How do I contribute?
 
