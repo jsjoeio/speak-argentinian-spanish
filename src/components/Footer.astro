@@ -1,8 +1,18 @@
 ---
+import Link from "./ui/Link.astro";
+
 const today = new Date();
 ---
 
-<footer class="text-primary w-[30em] mx-auto mt-8 text-center pb-12 max-w-full">
-  &copy; {today.getFullYear()}
-  <a href="https://twitter.com/joseprevite">@joseprevite</a>
+<footer class="container text-center py-6">
+  <p>
+    &copy; {today.getFullYear()}
+    <Link
+      href="https://twitter.com/joseprevite"
+      type={"dark"}
+      underlined={true}
+    >
+      @joseprevite
+    </Link>
+  </p>
 </footer>

@@ -1,0 +1,26 @@
+---
+const ringTypes = {
+  dark: "text-arg-dark ring-arg-dark ring-offset-arg-blue hover:text-arg-dark/80 ",
+};
+
+type Props = {
+  href: string;
+  type: keyof typeof ringTypes;
+  underlined?: boolean;
+  classes?: string;
+};
+
+const { href, type, underlined = false, classes, ...rest } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    ringTypes[type],
+    underlined ? "underline" : "",
+    "focus:outline-transparent focus-visible:ring-4 ring-offset-2 rounded-md",
+  ]}
+  {...rest}
+>
+  <slot />
+</a>

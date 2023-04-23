@@ -1,6 +1,6 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
@@ -13,8 +13,11 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://speakargentinianspanish.com/',
+  site: "https://speakargentinianspanish.com/",
+  experimental: {
+    assets: true,
+  },
   integrations: [mdx(), sitemap(), tailwind(), react()],
-  output: 'server',
-  adapter: vercel()
+  output: "server",
+  adapter: vercel(),
 });
