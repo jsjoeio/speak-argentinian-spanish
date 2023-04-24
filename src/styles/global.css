@@ -1,8 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Ranade";
+  src: local("Ranade"),
+    url("/assets/fonts/Ranade-Medium.ttf") format("truetype"),
+    url("/assets/fonts/Ranade-Medium.woff") format("woff"),
+    url("/assets/fonts/Ranade-Medium.woff2") format("woff2");
+  font-weight: regular;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ranade";
+  src: local("Ranade"), url("/assets/fonts/Ranade-Bold.ttf") format("truetype"),
+    url("/assets/fonts/Ranade-Bold.woff") format("woff"),
+    url("/assets/fonts/Ranade-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ranade";
+  src: local("Ranade"),
+    url("/assets/fonts/Ranade-MediumItalic.ttf") format("truetype"),
+    url("/assets/fonts/Ranade-MediumItalic.woff") format("woff"),
+    url("/assets/fonts/Ranade-MediumItalic.woff2") format("woff2");
+  font-weight: regular;
+  font-style: italic;
+}
+
 /*
   The CSS in this style tag is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
+
+/*
+
 body {
   font-family: Verdana, sans-serif;
   margin: auto;
@@ -71,4 +105,4 @@ blockquote {
   padding: 2px 0px 2px 20px;
   margin: 0px;
   font-style: italic;
-}
+} */

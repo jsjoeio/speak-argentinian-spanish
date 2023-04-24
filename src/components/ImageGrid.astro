@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import person1 from "../assets/person1.jpg";
+import person2 from "../assets/person2.jpg";
+import person3 from "../assets/person3.jpg";
+import person4 from "../assets/person4.jpg";
+import person5 from "../assets/person5.jpg";
+import person6 from "../assets/person6.jpg";
+import person7 from "../assets/person7.jpg";
+import person8 from "../assets/person8.jpg";
+import person9 from "../assets/person9.jpg";
+import person10 from "../assets/person10.jpg";
+import person11 from "../assets/person11.jpg";
+---
+
+<div
+  class="hidden lg:flex absolute top-0 right-24 2xl:right-[100px] 4xl:right-[250px] grid-cols-3 items-center gap-1 w-2/5"
+>
+  <div class="grid gap-1 grid-rows-3">
+    <Image src={person1} width={250} alt="" class="max-h-[20vh] max-w-[20vh]" />
+    <div></div>
+    <Image src={person2} width={250} alt="" class="max-h-[20vh] max-w-[20vh]" />
+  </div>
+  <div class="grid gap-1">
+    <Image src={person3} width={250} alt="" class="max-h-[20vh] max-w-[20vh]" />
+    <Image src={person4} width={250} alt="" class="max-h-[20vh] max-w-[20vh]" />
+    <Image src={person5} width={250} alt="" class="max-h-[20vh] max-w-[20vh]" />
+    <Image src={person6} width={250} alt="" class="max-h-[20vh] max-w-[20vh]" />
+  </div>
+  <div class="grid gap-1">
+    <Image src={person7} width={250} alt="" class="max-h-[20vh] max-w-[20vh]" />
+    <Image src={person8} width={250} alt="" class="max-h-[20vh] max-w-[20vh]" />
+    <Image src={person9} width={250} alt="" class="max-h-[20vh] max-w-[20vh]" />
+    <Image
+      src={person10}
+      width={250}
+      alt=""
+      class="max-h-[20vh] max-w-[20vh]"
+    />
+    <Image
+      src={person11}
+      width={250}
+      alt=""
+      class="max-h-[20vh] max-w-[20vh]"
+    />
+  </div>
+</div>
