@@ -70,7 +70,7 @@ export function CTA() {
           ))}
         </div>
         <p>
-          Join {waitlistCount} other{waitlistCount === 1 ? "" : "s"} unlocking
+          Join {waitlistCount} other{waitlistCount < 2 ? "" : "s"} unlocking
           Spanish
         </p>
       </div>
