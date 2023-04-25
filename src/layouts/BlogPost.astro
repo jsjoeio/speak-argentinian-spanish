@@ -5,66 +5,44 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { About } from "../components/About";
 import FormattedDate from "../components/FormattedDate.astro";
+import BaseLayout from "./BaseLayout.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, date, updatedDate, heroImage } = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-    <style>
-      .title {
-        font-size: 2em;
-        margin: 0.25em 0 0;
-      }
-      hr {
-        border-top: 1px solid #ddd;
-        margin: 1rem 0;
-      }
-      .last-updated-on {
-        font-style: italic;
-      }
-    </style>
-  </head>
-
-  <body>
-    <Header />
-    <main>
-      <article class="prose lg:prose-xl prose-stone mb-24">
-        <div class="w-full mx-auto space-y-4 text-center">
-          <h1 class="text-7xl font-bold leading-tight md:text-7xl">
-            {title}
-          </h1>
-          {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-          <p class="text-sm">
-            by
-            <a
-              rel="noopener noreferrer"
-              href="https://twitter.com/joseprevite"
-              target="_blank"
-              class="text-[#3273dc]"
-            >
-              <span itemprop="name">Joe Previte</span></a
-            >{" "}on
-            <FormattedDate date={date} />
-            {
-              updatedDate && (
-                <div class="last-updated-on">
-                  Last updated on <FormattedDate date={updatedDate} />
-                </div>
-              )
-            }
-          </p>
-        </div>
-        <div>
-          <hr />
-          <slot />
-        </div>
-      </article>
-      <About />
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout>
+  <article class="prose mx-auto lg:prose-xl prose-stone mb-24">
+    <div class="w-full mx-auto space-y-4 text-center">
+      <h1 class="text-7xl font-bold leading-tight md:text-7xl">
+        {title}
+      </h1>
+      {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+      <p class="text-sm">
+        by
+        <a
+          rel="noopener noreferrer"
+          href="https://twitter.com/joseprevite"
+          target="_blank"
+          class="text-[#3273dc]"
+        >
+          <span itemprop="name">Joe Previte</span></a
+        >{" "}on
+        <FormattedDate date={date} />
+        {
+          updatedDate && (
+            <div class="last-updated-on">
+              Last updated on <FormattedDate date={updatedDate} />
+            </div>
+          )
+        }
+      </p>
+    </div>
+    <div>
+      <hr />
+      <slot />
+    </div>
+  </article>
+  <About />
+</BaseLayout>

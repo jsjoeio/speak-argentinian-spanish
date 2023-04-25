@@ -17,7 +17,7 @@ const { href, type, underlined = false, classes, ...rest } = Astro.props;
   href={href}
   class:list={[
     ringTypes[type],
-    underlined ? "underline" : "",
+    { underline: underlined },
     "focus:outline-transparent focus-visible:ring-4 ring-offset-2 rounded-md",
   ]}
   {...rest}
