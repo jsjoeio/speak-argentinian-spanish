@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export function CTA() {
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -11,6 +13,26 @@ export function CTA() {
     // Submit the form
     event.target.submit();
   };
+  type ResponseData = {
+    totalCount: number;
+  };
+  const [waitlistCount, setWaitlistCount] = useState(null);
+  useEffect(() => {
+    async function fetchWaitlistTotal() {
+      setWaitlistCount(null);
+      const res = await fetch("/getWaitlistTotal.json");
+      const data = (await res.json()) as ResponseData;
+      if (!ignore) {
+        setWaitlistCount(data.totalCount);
+      }
+    }
+
+    let ignore = false;
+    fetchWaitlistTotal();
+    return () => {
+      ignore = true;
+    };
+  }, []);
   return (
     <div className="grid gap-4">
       <div id="cta">
@@ -47,7 +69,10 @@ export function CTA() {
             />
           ))}
         </div>
-        <p>Join {/* FETCH from Redis */} others unlocking Spanish</p>
+        <p>
+          Join {waitlistCount} other{waitlistCount === 1 ? "" : "s"} unlocking
+          Spanish
+        </p>
       </div>
     </div>
   );
