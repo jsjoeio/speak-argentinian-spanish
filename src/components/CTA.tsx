@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 
-type ResponseData = {
+type SignupResponseData = {
   success: boolean;
+};
+
+type ResponseData = {
+  totalCount: number;
 };
 
 export function CTA() {
@@ -14,10 +18,10 @@ export function CTA() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-      const data = (await res.json()) as ResponseData;
+
+      const data = (await res.json()) as SignupResponseData;
 
       if (data.success) {
-        // help
         location.href = "/thank-you";
       }
     } catch (error) {

@@ -23,12 +23,17 @@ export async function post({ request, redirect }) {
 
   try {
     const response = await fetch(url, options);
+
     return {
-      success: response.status === 200 || response.status === 201,
+      body: JSON.stringify({
+        success: response.status === 200 || response.status === 201,
+      }),
     };
   } catch (error) {
     return {
-      success: false,
+      body: JSON.stringify({
+        success: false,
+      }),
     };
   }
 }
