@@ -4,11 +4,7 @@ type ResponseData = {
   success: boolean;
 };
 
-type CTAProps = {
-  redirect: (path: string) => Promise<void>;
-};
-
-export function CTA({ redirect }: CTAProps) {
+export function CTA() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -22,7 +18,7 @@ export function CTA({ redirect }: CTAProps) {
 
       if (data.success) {
         // help
-        await redirect("/thank-you");
+        location.href = "/thank-you";
       }
     } catch (error) {
       console.error("uh oh", error);
