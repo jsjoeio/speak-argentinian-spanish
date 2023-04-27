@@ -1,22 +1,36 @@
 import { useEffect, useState } from "react";
 
-export function CTA() {
+type ResponseData = {
+  success: boolean;
+};
+
+type CTAProps = {
+  redirect: (path: string) => Promise<void>;
+};
+
+export function CTA({ redirect }: CTAProps) {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Perform some action before submitting the form
-    // Update count in database
-    const resp = await fetch("/updateWaitlistTotal.json", {
-      method: "POST",
-    });
+    try {
+      const res = await fetch("/signup.json", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = (await res.json()) as ResponseData;
 
-    // Submit the form
-    event.target.submit();
+      if (data.success) {
+        // help
+        await redirect("/thank-you");
+      }
+    } catch (error) {
+      console.error("uh oh", error);
+    }
   };
-  type ResponseData = {
-    totalCount: number;
-  };
+
   const [waitlistCount, setWaitlistCount] = useState(null);
+  const [email, setEmail] = useState("");
   useEffect(() => {
     async function fetchWaitlistTotal() {
       setWaitlistCount(null);
@@ -37,8 +51,6 @@ export function CTA() {
     <div className="grid gap-4">
       <div id="cta">
         <form
-          method="POST"
-          action="https://forms.reform.app/headless/WR4x5f/arg-spanish-waitlist/c1zkky/submissions"
           onSubmit={handleSubmit}
           className="flex items-center flex-wrap gap-2"
         >
@@ -48,6 +60,8 @@ export function CTA() {
             id="12c97b2c-36a9-4f3f-9afb-8ee39992c2cd"
             name="answers[12c97b2c-36a9-4f3f-9afb-8ee39992c2cd]"
             placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <button
