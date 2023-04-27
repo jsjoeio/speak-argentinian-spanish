@@ -25,6 +25,7 @@ module.exports = {
       },
       gridTemplateRows: {
         "auto-1fr-auto": "auto 1fr auto",
+        "1fr-auto": "1fr auto",
       },
       maxWidth: {
         heading: "20ch",
