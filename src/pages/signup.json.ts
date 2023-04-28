@@ -4,10 +4,10 @@ export async function post({ request, redirect }) {
   const postBody = {
     email: body.email,
     utm_source: "website",
+    referring_site: "speakargentinianspanish.com",
     // TODO@jsjoeio - refactor CTA to allow us to pass in
     // then make these required
     // utm_campaign: blog_post_footer, etc. (we could get more specific too)
-    // referring_site: www.wayneenterprise.com/blog
   };
   const url =
     "https://api.beehiiv.com/v2/publications/pub_6fcf5bfc-5793-49e6-b6b2-abcf322a6fd7/subscriptions";
