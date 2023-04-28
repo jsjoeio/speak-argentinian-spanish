@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { CTA } from "../components/CTA";
+import CTA from "../components/CTA.astro";
 import Link from "../components/ui/Link.astro";
 import Heading from "../components/ui/Heading.astro";
 ---
@@ -17,7 +17,7 @@ import Heading from "../components/ui/Heading.astro";
     <div class="bg-arg-dark p-6 sm:p-8">
       <div class="mx-auto grid gap-6 place-content-center">
         <Heading tag={"h2"} size={"h3"}>Get on the waitlist</Heading>
-        <CTA client:visible />
+        <CTA />
       </div>
     </div>
   </div>

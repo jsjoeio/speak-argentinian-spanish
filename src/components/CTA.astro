@@ -1,0 +1,49 @@
+---
+import { SignupForm } from "./SignupForm";
+import { WaitlistSection } from "./WaitlistSection";
+---
+
+<div class="grid gap-4">
+  <SignupForm client:visible />
+  <div class="flex items-center flex-wrap gap-4">
+    <div class="flex items-center ml-4">
+      <!-- Since Astro doesn't have dynamic imports, you'll have to manually specify the image URLs -->
+      <img
+        src="/assets/images/waitlist1.jpg"
+        alt=""
+        class="rounded-full border-4 border-arg-dark -ml-4"
+      />
+      <img
+        src="/assets/images/waitlist2.jpg"
+        alt=""
+        class="rounded-full border-4 border-arg-dark -ml-4"
+      />
+      <img
+        src="/assets/images/waitlist3.jpg"
+        alt=""
+        class="rounded-full border-4 border-arg-dark -ml-4"
+      />
+      <img
+        src="/assets/images/waitlist4.jpg"
+        alt=""
+        class="rounded-full border-4 border-arg-dark -ml-4"
+      />
+      <img
+        src="/assets/images/waitlist5.jpg"
+        alt=""
+        class="rounded-full border-4 border-arg-dark -ml-4"
+      />
+      <img
+        src="/assets/images/waitlist6.jpg"
+        alt=""
+        class="rounded-full border-4 border-arg-dark -ml-4"
+      />
+      <img
+        src="/assets/images/waitlist7.jpg"
+        alt=""
+        class="rounded-full border-4 border-arg-dark -ml-4"
+      />
+    </div>
+    <WaitlistSection client:visible />
+  </div>
+</div>
