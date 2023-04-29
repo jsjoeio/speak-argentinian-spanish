@@ -2,7 +2,7 @@
 title: "Argentinian Podcasts on Spotify"
 slug: argentinian-content-spotify
 description: "A list of podcasts on Spotify with at least one host who is Argentinian and speaks with a Rioplatense accent."
-date: "Mar 06 2022"
+date: "Mar 06 2023"
 ---
 
 Similar to finding [Argentinian content on YouTube](/argentinian-content-youtube/), it's also hard to find good podcasts on Spotify with at least one host from Argentina.
@@ -33,7 +33,7 @@ Here's the list along with a brief description
 - [Toda Por La Tarde](https://open.spotify.com/show/799DVWQ8FCmHdcECWBoN4f) - technology
 - [Un Mundo Maravilloso](https://open.spotify.com/show/0zGFAX8zeYbDjEX4sC7bbk) - talk show
 - [¿Por qué no te habré hecho caso? con Santiago Siri y Hernán Zin](https://open.spotify.com/show/3uayw7As069jmVEqkA3Ds6?si=6352a5333f304e6a) - crypto
-- [Traé Spanish](https://open.spotify.com/show/2e9ywcRVRUdwqKckqdEO3j) - Rioplatense Spanish
+- [Traé Alfajores](https://open.spotify.com/show/2e9ywcRVRUdwqKckqdEO3j) - Rioplatense Spanish
 
 ## How do I contribute?
 

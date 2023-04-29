@@ -2,7 +2,7 @@
 title: "Argentinian Content on YouTube"
 slug: argentinian-content-youtube
 description: "A list of YouTube channels by creators who are Argentinian and speak with a Rioplatense accent."
-date: "Mar 06 2022"
+date: "Mar 06 2023"
 ---
 
 You'd be surprised at how difficult it is to search YouTube for Argentinian content. Specifically, finding channels where the creator is from Argentina.
@@ -26,7 +26,7 @@ Here's the list along with a brief description:
 - [Soy Rada](https://www.youtube.com/@SoyRada) - comedian
 - [el denguee](https://www.youtube.com/@eldenguee) - vlogger (rapper, party-er?)
 - [EstoEsBoca12](https://www.youtube.com/@EstoEsBoca12) - soccer channel
-- [Fernando Lerner](https://www.youtube.com/user/Shadowlair2) - tech podcaster 
+- [Fernando Lerner](https://www.youtube.com/user/Shadowlair2) - tech podcaster
 - [Flo Cárdenas Yoga](https://www.youtube.com/@flocardenas) - yoga channel
 - [Beibi Venus](https://www.youtube.com/@beibivenus) - life advice vlogger
 - [GabinoSilva ](https://www.youtube.com/@GabinoSilva) - vlogger
@@ -64,8 +64,8 @@ Here's the list along with a brief description:
 - [Urbana Play 104.3 FM](https://www.youtube.com/@UrbanaPlayFM) - radio show
 - [YoMeAnimo!](https://www.youtube.com/@yomeanimo) - travel tips
 - [Paulina Cocina](https://youtube.com/@paulinacocina) - cooking show
-- [Damian Kuc](https://youtube.com/@DamianKucOficial) - history 
-- [dinosaur vlogs](https://www.youtube.com/@DinosaurVlogs)  - mystery
+- [Damian Kuc](https://youtube.com/@DamianKucOficial) - history
+- [dinosaur vlogs](https://www.youtube.com/@DinosaurVlogs) - mystery
 - [Vicky Armida](https://youtube.com/@VickyArmida) - mystery
 - [Detrás del Dato](https://www.youtube.com/@DetrasdelDato) - history
 - [Sofi Maure](https://www.youtube.com/@SofiMaure) - vlogger
