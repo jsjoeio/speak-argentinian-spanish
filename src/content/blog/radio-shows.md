@@ -1,6 +1,6 @@
 ---
 title: "The Best Live Radio Shows in Argentina"
-slug: argentinian-content-spotify
+slug: radio-shows-argentina
 description: "A list of local radio shows that broadcast live daily to YouTube based out of Argentina."
 date: "Apr 29 2023"
 ---
