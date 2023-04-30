@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "pr": "gh pr create --fill"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.16.0",
