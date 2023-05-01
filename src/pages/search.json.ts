@@ -1,3 +1,4 @@
+import Fuse from "fuse.js";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("blog")).sort(
@@ -7,14 +8,28 @@ const posts = (await getCollection("blog")).sort(
 export async function get({ request }) {
   const url = new URL(request.url);
   const query = url.searchParams.get("q");
+  const fuse = new Fuse(posts, {
+    includeScore: true,
+    shouldSort: true,
+    minMatchCharLength: 2,
+    includeMatches: true,
+    keys: [
+      {
+        name: "data.title",
+        weight: 3,
+      },
+      {
+        name: "data.description",
+        weight: 2,
+      },
+      {
+        name: "data.body",
+        weight: 1,
+      },
+    ],
+  });
+  const filteredPosts = fuse.search(query);
 
-  const filteredPosts = posts.reduce((acc, post) => {
-    const postTitleAndDescription = `${post.data.title} ${post.data.description}`;
-    if (postTitleAndDescription.toLowerCase().includes(query.toLowerCase())) {
-      acc.push(post);
-    }
-    return acc;
-  }, []);
   return new Response(JSON.stringify(filteredPosts), {
     status: 200,
     headers: {
