@@ -2,27 +2,55 @@
 import FormattedDate from "../components/FormattedDate.astro";
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Heading from "../components/ui/Heading.astro";
+import Link from "../components/ui/Link.astro";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.date.valueOf() - b.data.date.valueOf()
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 ---
 
 <BaseLayout title="Blog Page">
   <div class="bg-arg-white h-full text-arg-dark py-8 sm:py-12">
-    <div class="container grid gap-4">
-      <h1 class="text-4xl font-bold mb-4" id="recent-posts">
-        Recent Blog Posts
-      </h1>
-      <a href="/" class="underline">Return home</a>
-      <section aria-labelledby="recent-posts">
+    <div class="container grid gap-8 sm:gap-12">
+      <div class="sm:text-center max-w-prose sm:mx-auto">
+        <p class="uppercase text-arg-gold">Blog Posts</p>
+        <h1 class="text-4xl font-bold mb-4" id="recent-posts">
+          Recently Published Posts
+        </h1>
+        <p>
+          Welcome to the Speak Argentinian Spanish blog! Learn about the unique
+          dialect spoken in Argentina, from grammar to cultural insights and
+          travel tips.
+        </p>
+      </div>
+      <div class="bg-arg-muted h-1 w-80 max-w-full sm:mx-auto"></div>
+      <section
+        aria-labelledby="recent-posts"
+        class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3 items-start"
+      >
         {
           posts.map((post) => (
-            <article>
-              <FormattedDate date={post.data.date} />
-              <a class="underline text-arg-dark" href={`/${post.slug}/`}>
-                {post.data.title}
-              </a>
+            <article class="bg-arg-white p-6 sm:p-8 rounded border-4 border-arg-muted shadow-md shadow-arg-muted/40 grid gap-4">
+              <div>
+                <FormattedDate
+                  date={post.data.date}
+                  classes="uppercase text-arg-gold"
+                />
+                <Heading tag={"h2"} size={"h4"}>
+                  <a
+                    class="font-bold focus:outline-none focus-visible:ring-4 ring-offset-2 ring-offset-arg-white ring-arg-gold"
+                    href={`/${post.slug}/`}
+                  >
+                    {post.data.title}
+                  </a>
+                </Heading>
+              </div>
+              <div class="bg-arg-muted h-[1px] w-full" />
+              <p>{post.data.description}</p>
+              <Link href={`/${post.slug}/`} type={"btn--gold"}>
+                Read Post
+              </Link>
             </article>
           ))
         }
