@@ -9,20 +9,24 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <BaseLayout title="Blog Page">
-  <div class="container grid gap-4">
-    <h1 class="text-4xl font-bold mb-4">Recent Blog Posts</h1>
-    <a href="/" class="underline">Return home</a>
-    <ul>
-      {
-        posts.map((post) => (
-          <li>
-            <FormattedDate date={post.data.date} />
-            <a class="underline text-arg-dark" href={`/${post.slug}/`}>
-              {post.data.title}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+  <div class="bg-arg-white h-full text-arg-dark py-8 sm:py-12">
+    <div class="container grid gap-4">
+      <h1 class="text-4xl font-bold mb-4" id="recent-posts">
+        Recent Blog Posts
+      </h1>
+      <a href="/" class="underline">Return home</a>
+      <section aria-labelledby="recent-posts">
+        {
+          posts.map((post) => (
+            <article>
+              <FormattedDate date={post.data.date} />
+              <a class="underline text-arg-dark" href={`/${post.slug}/`}>
+                {post.data.title}
+              </a>
+            </article>
+          ))
+        }
+      </section>
+    </div>
   </div>
 </BaseLayout>
