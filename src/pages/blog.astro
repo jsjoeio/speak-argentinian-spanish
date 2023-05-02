@@ -8,6 +8,9 @@ import Link from "../components/ui/Link.astro";
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
+
+const copy =
+  "Welcome to the Speak Argentinian Spanish blog! Learn about the Rioplatense dialect spoken in Argentina, from finding the best content, to tips and tricks, and vocabulary you wish you knew before.";
 ---
 
 <BaseLayout title="Blog Page">
@@ -18,11 +21,7 @@ const posts = (await getCollection("blog")).sort(
         <h1 class="text-4xl font-bold mb-4" id="recent-posts">
           Recently Published Posts
         </h1>
-        <p>
-          Welcome to the Speak Argentinian Spanish blog! Learn about the unique
-          dialect spoken in Argentina, from grammar to cultural insights and
-          travel tips.
-        </p>
+        <p>{copy}</p>
       </div>
       <div class="bg-arg-muted h-1 w-80 max-w-full sm:mx-auto"></div>
       <section
