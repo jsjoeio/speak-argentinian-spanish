@@ -7,7 +7,8 @@ const posts = (await getCollection("blog")).sort(
 
 export async function get({ request }) {
   const url = new URL(request.url);
-  const query = url.searchParams.get("q");
+  const query = url.searchParams.get("q") ?? "";
+  const limit = url.searchParams.get("limit");
   const fuse = new Fuse(posts, {
     includeScore: true,
     shouldSort: true,
@@ -30,10 +31,15 @@ export async function get({ request }) {
   });
   const filteredPosts = fuse.search(query);
 
-  return new Response(JSON.stringify(filteredPosts), {
-    status: 200,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  return new Response(
+    limit
+      ? JSON.stringify(filteredPosts.slice(0, +limit))
+      : JSON.stringify(filteredPosts),
+    {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 }
