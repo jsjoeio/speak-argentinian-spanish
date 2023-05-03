@@ -31,19 +31,19 @@ import Heading from "../ui/Heading.astro";
       >
     </form>
   </div>
-
-  <script>
-    const searchWidget = document.querySelector(
-      "#search-widget"
-    ) as HTMLFormElement;
-
-    searchWidget.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const formData = new FormData(searchWidget);
-      const searchInput = formData.get("search") as string;
-      const url = new URL("/search/", window.location.origin);
-      url.searchParams.set("q", searchInput);
-      window.location.href = url.toString();
-    });
-  </script>
 </aside>
+
+<script>
+  const searchWidget = document.querySelector(
+    "#search-widget"
+  ) as HTMLFormElement;
+
+  searchWidget.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(searchWidget);
+    const searchInput = formData.get("search") as string;
+    const url = new URL("/search/", window.location.origin);
+    url.searchParams.set("q", searchInput);
+    window.location.href = url.toString();
+  });
+</script>
