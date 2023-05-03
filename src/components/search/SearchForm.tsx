@@ -1,14 +1,18 @@
 import { useState } from "react";
 
-const SearchForm = () => {
-  const [query, setQuery] = useState("");
-  async function handleSubmit(e) {
-    e.preventDefault();
-    return (window.location.href = `/search?q=${encodeURIComponent(query)}`);
-  }
+type Props = {
+  query: string;
+  setQuery: React.Dispatch<React.SetStateAction<string>>;
+};
 
+const SearchForm = ({ query, setQuery }: Props) => {
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        window.location.href = `/search/?q=${query}`;
+      }}
+    >
       {" "}
       <input
         className="block w-full max-w-xs py-2 px-4 rounded-md bg-transparent border-2 border-arg-gold focus:outline-arg-gold placeholder:text-arg-muted"
