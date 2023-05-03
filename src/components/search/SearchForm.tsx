@@ -10,10 +10,11 @@ const SearchForm = ({ query, setQuery }: Props) => {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        window.location.href = `/search/?q=${query}`;
+        const url = new URL(window.location.href);
+        url.searchParams.set("q", query);
+        window.history.replaceState(null, "", url.toString());
       }}
     >
-      {" "}
       <input
         className="block w-full max-w-xs py-2 px-4 rounded-md bg-transparent border-2 border-arg-gold focus:outline-arg-gold placeholder:text-arg-muted"
         type="search"
