@@ -2,7 +2,7 @@
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Heading from "../components/ui/Heading.astro";
-import SearchForm from "../components/SearchForm";
+import SearchApp from "../components/search/SearchApp";
 ---
 
 <BaseLayout title="Search results">
@@ -15,7 +15,7 @@ import SearchForm from "../components/SearchForm";
           or more.
         </p>
       </div>
-      <SearchForm />
+      <SearchApp client:load />
     </div>
   </div>
 </BaseLayout>
