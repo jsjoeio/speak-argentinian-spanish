@@ -1,3 +1,5 @@
+import { FiSearch } from "react-icons/fi";
+
 type Props = {
   query: string;
   setQuery: React.Dispatch<React.SetStateAction<string>>;
@@ -32,21 +34,7 @@ const SearchForm = ({ query, setQuery }: Props) => {
         className="bg-arg-muted peer-focus:bg-arg-gold shadow-md text-xs px-4 rounded-r text-arg-white uppercase focus:outline-none hover:shadow-none focus:shadow-none transition-shadow focus-visible:ring-4 ring-arg-dark cursor-pointer flex items-center gap-1"
         aria-label="Submit search"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          className="feather feather-search"
-        >
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
+        <FiSearch className="w-6 h-6" />
       </button>
     </form>
   );
