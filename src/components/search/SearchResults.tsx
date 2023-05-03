@@ -40,6 +40,10 @@ const SearchResults = ({ query }: { query: string }) => {
     },
   });
 
+  if (query.length === 0) return null;
+  if (status === "loading") return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+
   return (
     <section
       aria-label="Located Posts"

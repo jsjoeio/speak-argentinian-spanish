@@ -24,7 +24,6 @@ const SearchForm = ({ query, setQuery }: Props) => {
         placeholder="Enter Search Term…"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        required
       />
       <label htmlFor="search-widget-input" className="sr-only">
         Enter a search term
