@@ -39,6 +39,7 @@ const SearchResults = ({ query }: { query: string }) => {
       }
     },
   });
+  console.log("🚀 ~ SearchResults ~ data:", data);
 
   if (query.length === 0) return null;
   if (status === "loading") return <div>Loading...</div>;
