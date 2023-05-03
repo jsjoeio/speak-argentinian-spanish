@@ -1,8 +1,6 @@
-import { useState } from "react";
-
 type Props = {
-  query?: string;
-  setQuery?: React.Dispatch<React.SetStateAction<string>>;
+  query: string;
+  setQuery: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const SearchForm = ({ query, setQuery }: Props) => {

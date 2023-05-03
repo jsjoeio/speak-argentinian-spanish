@@ -1,11 +1,8 @@
 ---
-import FormattedDate from "../components/FormattedDate.astro";
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Heading from "../components/ui/Heading.astro";
-import Link from "../components/ui/Link.astro";
-import SearchForm from "../components/search/SearchForm";
 import PostCard from "../components/PostCard";
+import SearchWidget from "../components/search/SearchWidget.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
@@ -14,7 +11,6 @@ const posts = (await getCollection("blog")).sort(
 
 <BaseLayout title="Blog Page">
   <div class="bg-arg-white h-full text-arg-dark py-8 sm:py-12">
-    <SearchForm client:visible />
     <div class="container grid gap-8 sm:gap-12">
       <div class="sm:text-center max-w-prose sm:mx-auto">
         <p class="uppercase text-arg-gold">Blog Posts</p>
@@ -34,6 +30,7 @@ const posts = (await getCollection("blog")).sort(
       >
         {posts.map((post) => <PostCard post={post} key={post.slug} />)}
       </section>
+      <SearchWidget />
     </div>
   </div>
 </BaseLayout>

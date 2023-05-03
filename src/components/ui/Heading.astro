@@ -1,6 +1,6 @@
 ---
 const headingOptions = {
-  h1: "text-4xl sm:text-5xl",
+  h1: "text-4xl sm:text-5xl max-w-heading ",
   h2: "text-3xl sm:text-4xl",
   h3: "text-2xl sm:text-3xl",
   h4: "text-xl sm:text-2xl",
@@ -22,7 +22,7 @@ const Tag = tag;
 <Tag
   class:list={[
     headingOptions[size ? size : tag], // style prop overrides tag prop
-    "max-w-heading font-bold", // universal styles
+    "font-bold", // universal styles
     classes, // user defined classes
   ]}
   {...rest}
