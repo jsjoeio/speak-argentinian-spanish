@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 // component imports
 import SearchForm from "./SearchForm";
-
+import SearchResults from "./SearchResults";
 const queryClient = new QueryClient();
 
 const SearchApp = () => {
@@ -32,6 +32,7 @@ const SearchApp = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <SearchForm query={query} setQuery={setQuery} />
+      <SearchResults query={query} />
     </QueryClientProvider>
   );
 };

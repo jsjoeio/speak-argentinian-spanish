@@ -13,7 +13,6 @@ export async function get({ request }) {
     includeScore: true,
     shouldSort: true,
     minMatchCharLength: 2,
-    includeMatches: true,
     keys: [
       {
         name: "data.title",

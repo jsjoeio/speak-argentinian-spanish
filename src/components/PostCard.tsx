@@ -3,10 +3,10 @@ const PostCard = ({ post }) => {
     <article className="bg-arg-white p-6 sm:p-8 rounded border-4 border-arg-muted shadow-md shadow-arg-muted/40 grid gap-4">
       <div>
         <time
-          dateTime={post.data.date.toISOString()}
+          dateTime={new Date(post.data.date).toISOString()}
           className="uppercase text-arg-gold"
         >
-          {post.data.date.toLocaleDateString("en-us", {
+          {new Date(post.data.date).toLocaleDateString("en-us", {
             year: "numeric",
             month: "short",
             day: "numeric",
