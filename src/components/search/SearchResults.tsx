@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import PostCard from "../PostCard";
 
 export type ResultObj = {
   id: string;
@@ -28,7 +29,7 @@ const SearchResults = ({ query }: { query: string }) => {
     queryFn: async () => {
       try {
         const res = await fetch(
-          `/postSearch.json?q=${query}&limit=${DEFAULT_NUM}`
+          `/postSearch.json?q=${query}&limit=${numOfResults}`
         );
         if (!res.ok) throw new Error("Network response was not ok");
         return res.json();
@@ -43,7 +44,11 @@ const SearchResults = ({ query }: { query: string }) => {
     <section
       aria-label="Located Posts"
       className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3 items-start"
-    ></section>
+    >
+      {data && data.length > 0
+        ? data.map((p) => <PostCard post={p.item} key={p.item.slug} />)
+        : "No results found…"}
+    </section>
   );
 };
 export default SearchResults;
