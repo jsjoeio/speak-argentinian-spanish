@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import PostCard from "../PostCard";
+import LoadingSpinner from "../ui/LoadingSpinner";
 
 export type ResultObj = {
   id: string;
@@ -24,6 +25,7 @@ const DEFAULT_NUM = 5;
 
 const SearchResults = ({ query }: { query: string }) => {
   const [numOfResults, setNumOfResults] = useState(DEFAULT_NUM);
+  // TODO: Add a button to load more results (or infinite scroll?)
   const { status, error, data } = useQuery<SearchResult[]>({
     queryKey: ["search"],
     queryFn: async () => {
@@ -39,10 +41,9 @@ const SearchResults = ({ query }: { query: string }) => {
       }
     },
   });
-  console.log("🚀 ~ SearchResults ~ data:", data);
 
   if (query.length === 0) return null;
-  if (status === "loading") return <div>Loading...</div>;
+  if (status === "loading") return <LoadingSpinner />;
   if (error) return <div>Error: {error.message}</div>;
 
   return (
