@@ -18,18 +18,21 @@
     "@astrojs/sitemap": "^1.0.1",
     "@astrojs/tailwind": "^3.0.1",
     "@astrojs/vercel": "^3.1.4",
+    "@tanstack/react-query": "^4.29.5",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@upstash/redis": "^1.20.0",
     "astro": "^2.2.2",
     "astro-icon": "^0.8.0",
     "daisyui": "^2.50.0",
+    "fuse.js": "^6.6.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-share": "^4.4.1",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9"
+    "@tailwindcss/typography": "^0.5.9",
+    "@tanstack/eslint-plugin-query": "^4.29.4"
   }
 }

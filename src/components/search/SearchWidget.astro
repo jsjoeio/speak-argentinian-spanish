@@ -1,0 +1,47 @@
+---
+import { Icon } from "astro-icon";
+import Heading from "../ui/Heading.astro";
+---
+
+<aside class="border-t-2 border-arg-muted">
+  <div
+    class="mx-auto max-w-lg p-6 sm:p-8 rounded-md grid gap-4 sm:place-items-center sm:text-center"
+  >
+    <Heading tag={"h2"} size={"h4"}>Can’t find what you need?</Heading>
+    <p>
+      Enter a search term to find blog posts on any theme, cultural concept, or
+      more.
+    </p>
+    <form id="search-widget" class="flex w-full">
+      <input
+        type="search"
+        id="search-widget-input"
+        name="search"
+        class="w-full px-4 py-3 bg-white focus:outline-none hover:shadow-none focus:shadow-none transition-shadow rounded-l appearance-none border-2 border-arg-muted focus-visible:border-arg-gold peer placeholder:text-arg-muted shadow"
+        placeholder="Search the blog…"
+      /><label for="search-widget-input" class="sr-only"
+        >Enter a search term</label
+      ><button
+        type="submit"
+        class="bg-arg-muted peer-focus:bg-arg-gold shadow-md text-xs px-4 rounded-r text-arg-white uppercase focus:outline-none hover:shadow-none focus:shadow-none transition-shadow focus-visible:ring-4 ring-arg-dark cursor-pointer flex items-center gap-1"
+        aria-label="Submit search"
+        ><Icon name="search" class="w-6 h-6" /></button
+      >
+    </form>
+  </div>
+</aside>
+
+<script>
+  const searchWidget = document.querySelector(
+    "#search-widget"
+  ) as HTMLFormElement;
+
+  searchWidget.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(searchWidget);
+    const searchInput = formData.get("search") as string;
+    const url = new URL("/search/", window.location.origin);
+    url.searchParams.set("q", searchInput);
+    window.location.href = url.toString();
+  });
+</script>
