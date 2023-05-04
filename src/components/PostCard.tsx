@@ -15,7 +15,7 @@ const PostCard = ({ post }) => {
         <h2 className="text-xl sm:text-2xl max-w-heading font-bold">
           <a
             className="font-bold focus:outline-none focus-visible:ring-4 ring-offset-2 ring-offset-arg-white ring-arg-gold"
-            href={`/${post.slug}/`}
+            href={`/${post.slug}`}
           >
             {post.data.title}
           </a>
