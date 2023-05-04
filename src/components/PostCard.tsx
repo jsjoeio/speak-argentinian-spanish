@@ -24,7 +24,7 @@ const PostCard = ({ post }) => {
       <div className="bg-arg-muted h-[1px] w-full" />
       <p>{post.data.description}</p>
       <a
-        href={`/${post.slug}/`}
+        href={`/${post.slug}`}
         className="capitalize text-center bg-arg-gold text-arg-white font-bold w-fit px-6 py-2 rounded-md transition-colors hover:bg-arg-muted focus:outline-none ring-offset-arg-white  focus-visible:ring-offset-2 focus-visible:ring-arg-gold focus-visible:ring-4 ring-offset-2"
       >
         Read Post
