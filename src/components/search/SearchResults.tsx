@@ -67,7 +67,7 @@ const SearchResults = ({ query }: { query: string }) => {
 
   return (
     <section aria-label="Located Posts" className="grid gap-8 items-start">
-      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3 item-start">
+      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3 items-start">
         {matchingResults.length > 0
           ? matchingResults
               .slice(0, numOfResults)
