@@ -13,36 +13,38 @@ const { title, description, date, updatedDate, heroImage } = Astro.props;
 ---
 
 <BaseLayout>
-  <article class="prose mx-auto lg:prose-xl prose-stone mb-24">
-    <div class="w-full mx-auto space-y-4 text-center">
-      <h1 class="text-7xl font-bold leading-tight md:text-7xl">
-        {title}
-      </h1>
-      {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-      <p class="text-sm">
-        by
-        <a
-          rel="noopener noreferrer"
-          href="https://twitter.com/joseprevite"
-          target="_blank"
-          class="text-[#3273dc]"
-        >
-          <span itemprop="name">Joe Previte</span></a
-        >{" "}on
-        <FormattedDate date={date} />
-        {
-          updatedDate && (
-            <div class="last-updated-on">
-              Last updated on <FormattedDate date={updatedDate} />
-            </div>
-          )
-        }
-      </p>
-    </div>
-    <div>
-      <hr />
-      <slot />
-    </div>
-  </article>
-  <About />
+  <div class="bg-arg-white text-arg-dark py-12 sm:py-16 px-4 sm:px-6">
+    <article class="prose mx-auto lg:prose-xl prose-stone pb-6 sm:pb-8">
+      <div class="w-full sm:mx-auto space-y-4 sm:text-center">
+        <h1 class="text-4xl font-bold leading-tight sm:text-5xl md:text-7xl">
+          {title}
+        </h1>
+        {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+        <p class="text-sm">
+          by
+          <a
+            rel="noopener noreferrer"
+            href="https://twitter.com/joseprevite"
+            target="_blank"
+            class="text-arg-gold"
+          >
+            <span itemprop="name">Joe Previte</span></a
+          >{" "}on
+          <FormattedDate date={date} />
+          {
+            updatedDate && (
+              <div class="last-updated-on">
+                Last updated on <FormattedDate date={updatedDate} />
+              </div>
+            )
+          }
+        </p>
+      </div>
+      <div>
+        <hr class="border-arg-muted/40" />
+        <slot />
+      </div>
+    </article>
+    <About />
+  </div>
 </BaseLayout>
