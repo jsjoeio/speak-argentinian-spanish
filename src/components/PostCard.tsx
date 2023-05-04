@@ -6,7 +6,7 @@ const PostCard = ({ post }) => {
           dateTime={new Date(post.data.date).toISOString()}
           className="uppercase text-arg-gold"
         >
-          {new Date(post.data.date).toLocaleDateString("en-us", {
+          {new Date(post.data.date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "short",
             day: "numeric",
