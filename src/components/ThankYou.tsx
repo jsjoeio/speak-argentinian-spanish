@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   EmailIcon,
   EmailShareButton,
@@ -16,10 +15,6 @@ import {
   WhatsappIcon,
 } from "react-share";
 
-type ResponseData = {
-  totalCount: number;
-};
-
 const URL = "https://speakargentinianspanish.com";
 const shortDescription = "Signup to learn Argentinian Spanish with me!";
 const longTitle = "Learn Argentinian Spanish with me!";
@@ -28,53 +23,26 @@ const longDescription =
 const shortTitle = "Learn Argentinian Spanish!";
 
 export function ThankYou() {
-  const [waitlistCount, setWaitlistCount] = useState(null);
-  useEffect(() => {
-    async function fetchWaitlistTotal() {
-      setWaitlistCount(null);
-      const res = await fetch("/getWaitlistTotal.json");
-      const data = (await res.json()) as ResponseData;
-      if (!ignore) {
-        setWaitlistCount(data.totalCount);
-      }
-    }
-
-    let ignore = false;
-    fetchWaitlistTotal();
-    return () => {
-      ignore = true;
-    };
-  }, []);
   return (
-    <div className="mt-16 mb-48">
-      <h1 className="leading-relaxed text-center font-semibold tracking-tighter text-5xl mb-8">
+    <div className="mt-8 sm:mt-16 mb-8 sm:mb-48">
+      <h1 className="leading-relaxed text-center font-semibold tracking-tighter text-3xl sm:text-5xl mb-4 sm:mb-8">
         Thank you!
       </h1>
       <img
-        className="mb-8"
+        className="mx-auto mb-4 sm:mb-8 max-w-full h-auto"
         src="https://media.giphy.com/media/W1TPavKSPEVVjz4LAJ/giphy.gif"
       />
-      <p className="mb-8">It's great to have you on the waitlist. </p>
-      <p className="mb-8">
-        Once the waitlist has 100 signups, I will email you the course outline
-        and ask for your feedback.
+      <p className="text-sm sm:text-lg mb-4 sm:mb-8 text-center px-4">
+        It's great to have you in the community.{" "}
       </p>
-
-      {waitlistCount ? (
-        <div className="mb-8">
-          <h2>Total Signups</h2>
-          <small>{waitlistCount}/100</small>
-          <progress
-            className="progress w-full"
-            value={waitlistCount}
-            max="100"
-          ></progress>
-        </div>
-      ) : null}
-      <h2 className="leading-relaxed text-center font-semibold tracking-tighter text-4xl mb-8">
+      <p className="text-sm sm:text-lg mb-4 sm:mb-8 text-center px-4">
+        <strong className="uppercase underline">important:</strong> Check your
+        email and confirm your signup.
+      </p>
+      <h2 className="leading-relaxed text-center font-semibold tracking-tighter text-2xl sm:text-4xl mb-4 sm:mb-8">
         Spread the word!
       </h2>
-      <div className="flex flex-row items-center justify-center">
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
         <EmailShareButton subject={shortTitle} url={URL} body={longDescription}>
           <EmailIcon size={32} round />
         </EmailShareButton>

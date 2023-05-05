@@ -77,7 +77,7 @@ export function SignupForm() {
               className="capitalize text-center bg-arg-white text-black font-bold w-fit px-6 py-2 border-2 border-arg-white rounded-md transition-colors hover:bg-arg-blue focus:outline-transparent focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-arg-gold"
               type="submit"
             >
-              Join the waitlist
+              Get the newsletter
             </button>
           </form>
         );
