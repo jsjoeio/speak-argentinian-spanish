@@ -24,23 +24,25 @@ const shortTitle = "Learn Argentinian Spanish!";
 
 export function ThankYou() {
   return (
-    <div className="mt-16 mb-48">
-      <h1 className="leading-relaxed text-center font-semibold tracking-tighter text-5xl mb-8">
+    <div className="mt-8 sm:mt-16 mb-8 sm:mb-48">
+      <h1 className="leading-relaxed text-center font-semibold tracking-tighter text-3xl sm:text-5xl mb-4 sm:mb-8">
         Thank you!
       </h1>
       <img
-        className="mb-8"
+        className="mx-auto mb-4 sm:mb-8 max-w-full h-auto"
         src="https://media.giphy.com/media/W1TPavKSPEVVjz4LAJ/giphy.gif"
       />
-      <p className="mb-8">It's great to have you in the community. </p>
-      <p className="mb-8">
+      <p className="text-sm sm:text-lg mb-4 sm:mb-8 text-center px-4">
+        It's great to have you in the community.{" "}
+      </p>
+      <p className="text-sm sm:text-lg mb-4 sm:mb-8 text-center px-4">
         <strong className="uppercase underline">important:</strong> Check your
         email and confirm your signup.
       </p>
-      <h2 className="leading-relaxed text-center font-semibold tracking-tighter text-4xl mb-8">
+      <h2 className="leading-relaxed text-center font-semibold tracking-tighter text-2xl sm:text-4xl mb-4 sm:mb-8">
         Spread the word!
       </h2>
-      <div className="flex flex-row items-center justify-center">
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
         <EmailShareButton subject={shortTitle} url={URL} body={longDescription}>
           <EmailIcon size={32} round />
         </EmailShareButton>
