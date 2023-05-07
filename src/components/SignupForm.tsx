@@ -27,6 +27,9 @@ export function SignupForm() {
 
     let ignore = false;
     fetchWaitlistTotal();
+    const searchParams = new URLSearchParams(document.location.search);
+    console.log(searchParams.get("utm_campaign"));
+
     return () => {
       ignore = true;
     };
@@ -37,10 +40,12 @@ export function SignupForm() {
     event.preventDefault();
 
     try {
+      const searchParams = new URLSearchParams(document.location.search);
+      const utmCampaign = searchParams.get("utm_campaign") || "none";
       const res = await fetch("/signup.json", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, utmCampaign }),
       });
 
       const data = (await res.json()) as SignupResponseData;
