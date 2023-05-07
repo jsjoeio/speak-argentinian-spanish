@@ -29,7 +29,7 @@ export function ThankYou() {
         Thank you!
       </h1>
       <img
-        className="mx-auto mb-4 sm:mb-8 max-w-full h-auto"
+        className="mx-auto mb-4 sm:mb-8 max-w-full h-auto sm:max-w-xs"
         src="https://media.giphy.com/media/W1TPavKSPEVVjz4LAJ/giphy.gif"
       />
       <p className="text-sm sm:text-lg mb-4 sm:mb-8 text-center px-4">
