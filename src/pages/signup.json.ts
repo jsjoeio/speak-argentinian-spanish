@@ -8,7 +8,7 @@ export async function post({ request, redirect }) {
     utm_campaign?: string;
   } = {
     email: body.email,
-    utm_source: "website",
+    utm_source: body.source ? `website-${body.source}` : "website",
     referring_site: "speakargentinianspanish.com",
   };
 

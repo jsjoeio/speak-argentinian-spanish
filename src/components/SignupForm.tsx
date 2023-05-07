@@ -10,7 +10,10 @@ type ResponseData = {
   totalCount: number;
 };
 
-export function SignupForm() {
+type SignupFormProps = {
+  source: string;
+};
+export function SignupForm({ source }: SignupFormProps) {
   const [state, setState] = useState<State>("initial");
   const [waitlistCount, setWaitlistCount] = useState(null);
   const [email, setEmail] = useState("");
@@ -45,7 +48,7 @@ export function SignupForm() {
       const res = await fetch("/signup.json", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, utmCampaign }),
+        body: JSON.stringify({ email, utmCampaign, source }),
       });
 
       const data = (await res.json()) as SignupResponseData;
