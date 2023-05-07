@@ -13,8 +13,8 @@ export function About() {
           </h4>
           <p>
             I studied abroad in Buenos Aires in 2013. Now I’m teaching my
-            daughter Argentinian Spanish 🇦🇷. I created this course because it’s
-            something <em>I wish existed</em> when I was first starting.{" "}
+            daughter Argentinian Spanish 🇦🇷. I created this newsletter to share
+            everything I learn with you.
           </p>
         </div>
       </div>

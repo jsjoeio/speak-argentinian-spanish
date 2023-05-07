@@ -1,10 +1,11 @@
 ---
 import { SignupForm } from "./SignupForm";
 import { WaitlistSection } from "./WaitlistSection";
+const { source } = Astro.props;
 ---
 
 <div class="grid gap-4">
-  <SignupForm client:visible />
+  <SignupForm client:visible source={source} />
   <div class="flex items-center flex-wrap gap-4">
     <div class="flex items-center ml-4">
       <!-- Since Astro doesn't have dynamic imports, you'll have to manually specify the image URLs -->

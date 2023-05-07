@@ -1,14 +1,23 @@
 export async function post({ request, redirect }) {
   const body = await request.json();
 
-  const postBody = {
+  const postBody: {
+    email: string;
+    utm_source: string;
+    referring_site: string;
+    utm_campaign?: string;
+  } = {
     email: body.email,
-    utm_source: "website",
+    utm_source: body.source ? `website-${body.source}` : "website",
     referring_site: "speakargentinianspanish.com",
-    // TODO@jsjoeio - refactor CTA to allow us to pass in
-    // then make these required
-    // utm_campaign: blog_post_footer, etc. (we could get more specific too)
   };
+
+  // On the frontend, we pass "none" if utm_campaign query param
+  // not found in the URL. See <SignupForm.tsx />
+  if (body.utmCampaign && body.utmCampaign !== "none") {
+    postBody.utm_campaign = body.utmCampaign;
+  }
+
   const url =
     "https://api.beehiiv.com/v2/publications/pub_6fcf5bfc-5793-49e6-b6b2-abcf322a6fd7/subscriptions";
   const options = {
