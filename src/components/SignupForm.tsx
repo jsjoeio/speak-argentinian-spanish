@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-type State = "initial" | "loading" | "success" | "error";
+type State = "initial" | "loading" | "success" | "error" | "api-broken";
 
 type SignupResponseData = {
   success: boolean;
@@ -14,7 +14,7 @@ type SignupFormProps = {
   source: string;
 };
 export function SignupForm({ source }: SignupFormProps) {
-  const [state, setState] = useState<State>("initial");
+  const [state, setState] = useState<State>("api-broken");
   const [waitlistCount, setWaitlistCount] = useState(null);
   const [email, setEmail] = useState("");
 
@@ -65,6 +65,23 @@ export function SignupForm({ source }: SignupFormProps) {
 
   function renderSignup() {
     switch (state) {
+      case "api-broken": {
+        return (
+          <iframe
+            src="https://embeds.beehiiv.com/7dc3628a-03fd-47f6-917e-672611f182a8?slim=true"
+            data-test-id="beehiiv-embed"
+            height="52"
+            frameBorder="0"
+            scrolling="no"
+            style={{
+              margin: 0,
+              borderRadius: "0px !important",
+              backgroundColor: "transparent",
+              width: "100%",
+            }}
+          ></iframe>
+        );
+      }
       case "initial": {
         return (
           <form
