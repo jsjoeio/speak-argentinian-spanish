@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-type State = "initial" | "loading" | "success" | "error";
+type State = "initial" | "loading" | "success" | "error" | "api-broken";
 
 type SignupResponseData = {
   success: boolean;
@@ -14,7 +14,7 @@ type SignupFormProps = {
   source: string;
 };
 export function SignupForm({ source }: SignupFormProps) {
-  const [state, setState] = useState<State>("initial");
+  const [state, setState] = useState<State>("api-broken");
   const [waitlistCount, setWaitlistCount] = useState(null);
   const [email, setEmail] = useState("");
 
@@ -30,8 +30,6 @@ export function SignupForm({ source }: SignupFormProps) {
 
     let ignore = false;
     fetchWaitlistTotal();
-    const searchParams = new URLSearchParams(document.location.search);
-    console.log(searchParams.get("utm_campaign"));
 
     return () => {
       ignore = true;
@@ -56,6 +54,8 @@ export function SignupForm({ source }: SignupFormProps) {
       if (data.success) {
         setState("success");
         location.href = "/thank-you";
+      } else {
+        setState("error");
       }
     } catch (error) {
       setState("error");
@@ -65,6 +65,23 @@ export function SignupForm({ source }: SignupFormProps) {
 
   function renderSignup() {
     switch (state) {
+      case "api-broken": {
+        return (
+          <iframe
+            src="https://embeds.beehiiv.com/7dc3628a-03fd-47f6-917e-672611f182a8?slim=true"
+            data-test-id="beehiiv-embed"
+            height="52"
+            frameBorder="0"
+            scrolling="no"
+            style={{
+              margin: 0,
+              borderRadius: "0px !important",
+              backgroundColor: "transparent",
+              width: "100%",
+            }}
+          ></iframe>
+        );
+      }
       case "initial": {
         return (
           <form
@@ -142,7 +159,10 @@ export function SignupForm({ source }: SignupFormProps) {
                   d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <span>Failed to signup. Please reload and try again.</span>
+              <span>
+                Failed to signup. Please reload and try again or email
+                joe@speakargentinianspanish.com.
+              </span>
             </div>
           </div>
         );
@@ -151,5 +171,9 @@ export function SignupForm({ source }: SignupFormProps) {
         return null;
     }
   }
-  return <div id="cta">{renderSignup()}</div>;
+  return (
+    <div className="max-w-lg" id="cta">
+      {renderSignup()}
+    </div>
+  );
 }
