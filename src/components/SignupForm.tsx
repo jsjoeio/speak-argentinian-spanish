@@ -30,8 +30,6 @@ export function SignupForm({ source }: SignupFormProps) {
 
     let ignore = false;
     fetchWaitlistTotal();
-    const searchParams = new URLSearchParams(document.location.search);
-    console.log(searchParams.get("utm_campaign"));
 
     return () => {
       ignore = true;
@@ -56,6 +54,8 @@ export function SignupForm({ source }: SignupFormProps) {
       if (data.success) {
         setState("success");
         location.href = "/thank-you";
+      } else {
+        setState("error");
       }
     } catch (error) {
       setState("error");
