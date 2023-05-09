@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 
-type State = "initial" | "loading" | "success" | "error" | "api-broken";
+type State =
+  | "initial"
+  | "loading"
+  | "success"
+  | "error"
+  | "alternative-initial"
+  | "final-error";
 
 type SignupResponseData = {
   success: boolean;
@@ -56,16 +62,18 @@ export function SignupForm({ source }: SignupFormProps) {
         location.href = "/thank-you";
       } else {
         setState("error");
+
+        setTimeout(() => setState("alternative-initial"), 1900);
       }
     } catch (error) {
-      setState("error");
+      setState("final-error");
       console.error("uh oh", error);
     }
   };
 
   function renderSignup() {
     switch (state) {
-      case "api-broken": {
+      case "alternative-initial": {
         return (
           <div className="max-w-lg">
             <iframe
@@ -144,7 +152,12 @@ export function SignupForm({ source }: SignupFormProps) {
           </div>
         );
       }
+      case "final-error":
       case "error": {
+        const text =
+          state === "error"
+            ? "Failed to signup. Please try again..."
+            : "Error. Please email joe@speakargentinianspanish.com to signup.";
         return (
           <div className="alert alert-error shadow-lg">
             <div>
@@ -161,10 +174,7 @@ export function SignupForm({ source }: SignupFormProps) {
                   d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <span>
-                Failed to signup. Please reload and try again or email
-                joe@speakargentinianspanish.com.
-              </span>
+              <span>{text}</span>
             </div>
           </div>
         );
