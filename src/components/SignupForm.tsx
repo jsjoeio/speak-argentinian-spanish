@@ -14,7 +14,7 @@ type SignupFormProps = {
   source: string;
 };
 export function SignupForm({ source }: SignupFormProps) {
-  const [state, setState] = useState<State>("api-broken");
+  const [state, setState] = useState<State>("initial");
   const [waitlistCount, setWaitlistCount] = useState(null);
   const [email, setEmail] = useState("");
 
@@ -67,19 +67,21 @@ export function SignupForm({ source }: SignupFormProps) {
     switch (state) {
       case "api-broken": {
         return (
-          <iframe
-            src="https://embeds.beehiiv.com/7dc3628a-03fd-47f6-917e-672611f182a8?slim=true"
-            data-test-id="beehiiv-embed"
-            height="52"
-            frameBorder="0"
-            scrolling="no"
-            style={{
-              margin: 0,
-              borderRadius: "0px !important",
-              backgroundColor: "transparent",
-              width: "100%",
-            }}
-          ></iframe>
+          <div className="max-w-lg">
+            <iframe
+              src="https://embeds.beehiiv.com/7dc3628a-03fd-47f6-917e-672611f182a8?slim=true"
+              data-test-id="beehiiv-embed"
+              height="52"
+              frameBorder="0"
+              scrolling="no"
+              style={{
+                margin: 0,
+                borderRadius: "0px !important",
+                backgroundColor: "transparent",
+                width: "100%",
+              }}
+            ></iframe>
+          </div>
         );
       }
       case "initial": {
@@ -171,9 +173,5 @@ export function SignupForm({ source }: SignupFormProps) {
         return null;
     }
   }
-  return (
-    <div className="max-w-lg" id="cta">
-      {renderSignup()}
-    </div>
-  );
+  return <div id="cta">{renderSignup()}</div>;
 }
