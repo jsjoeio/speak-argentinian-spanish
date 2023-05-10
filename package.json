@@ -14,7 +14,7 @@
   "dependencies": {
     "@astrojs/mdx": "^0.16.0",
     "@astrojs/react": "^2.0.2",
-    "@astrojs/rss": "^2.1.0",
+    "@astrojs/rss": "^2.4.1",
     "@astrojs/sitemap": "^1.0.1",
     "@astrojs/tailwind": "^3.0.1",
     "@astrojs/vercel": "^3.1.4",
@@ -26,9 +26,11 @@
     "astro-icon": "^0.8.0",
     "daisyui": "^2.50.0",
     "fuse.js": "^6.6.2",
+    "markdown-it": "^13.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-share": "^4.4.1",
+    "sanitize-html": "^2.10.0",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
