@@ -1,18 +1,30 @@
 ---
-import Link from "./ui/Link.astro";
+import { Icon } from "astro-icon";
 
+import Link from "./ui/Link.astro";
 const today = new Date();
 ---
 
-<footer class="container text-center py-6">
-  <p>
-    &copy; {today.getFullYear()}
+<footer class="container text-center py-6 grid justify-center">
+  <div class="flex gap-4 items-center z-10">
+    <p>
+      &copy; {today.getFullYear()}
+      <Link
+        href="https://twitter.com/joseprevite"
+        type={"dark"}
+        underlined={true}
+      >
+        @joseprevite
+      </Link>
+    </p>
     <Link
-      href="https://twitter.com/joseprevite"
+      href="/rss.xml"
       type={"dark"}
-      underlined={true}
+      underlined={false}
+      classes="text-4xl"
+      aria-label="Subscribe to RSS feed"
     >
-      @joseprevite
+      <Icon name="rss" class="w-5 h-5" />
     </Link>
-  </p>
+  </div>
 </footer>

@@ -1,12 +1,11 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PostCard from "../components/PostCard";
 import SearchWidget from "../components/search/SearchWidget.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
+import { getSortedBlogPosts } from "../utils/retreiveCollection";
+
+const posts = await getSortedBlogPosts();
 
 const copy =
   "Welcome to the Speak Argentinian Spanish blog! Learn about the Rioplatense dialect spoken in Argentina, from finding the best content, to tips and tricks, and vocabulary you wish you knew before.";
