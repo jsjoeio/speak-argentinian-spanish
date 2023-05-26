@@ -46,19 +46,19 @@ export default [
     title: "Best Content",
     items: [
       {
-        title: "About",
+        title: "Spotify",
+        href: "/argentinian-content-spotify",
+      },
+      {
+        title: "YouTube",
         href: "#",
       },
       {
-        title: "Support",
+        title: "Disney+",
         href: "#",
       },
       {
-        title: "Credits",
-        href: "#",
-      },
-      {
-        title: "Terms",
+        title: "Netflix",
         href: "#",
       },
     ],
