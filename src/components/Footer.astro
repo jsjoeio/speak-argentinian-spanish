@@ -3,20 +3,35 @@ import { Icon } from "astro-icon";
 
 import Link from "./ui/Link.astro";
 const today = new Date();
+import { SITE_MISSION, SOCIALS } from "../consts";
 ---
 
-<footer class="container text-center py-6 grid justify-center">
-  <div class="flex gap-4 items-center z-10">
+<footer class="container py-6 grid gap-8 text-arg-dark">
+  <div class="grid gap-2 max-w-xs">
+    <Icon name="logo-horizontal-no-logomark" class="w-64 sm:w-96" />
     <p>
-      &copy; {today.getFullYear()}
-      <Link
-        href="https://twitter.com/joseprevite"
-        type={"dark"}
-        underlined={true}
-      >
-        @joseprevite
-      </Link>
+      &copy; {today.getFullYear()} Joe Previte <span>
+        (<Link
+          href="https://twitter.com/joseprevite"
+          type={"dark"}
+          underlined={false}
+        >
+          @joseprevite
+        </Link>)
+      </span>
     </p>
+    <p>{SITE_MISSION}</p>
+    <div class="flex items-center gap-2">
+      {
+        SOCIALS.map((s) => (
+          <Link href={s.url} type={"dark"}>
+            <Icon name={s.icon} class="w-6 h-6" />
+          </Link>
+        ))
+      }
+    </div>
+  </div>
+  <!-- <div class="flex gap-4 items-center z-10">
     <Link
       href="/rss.xml"
       type={"dark"}
@@ -26,5 +41,5 @@ const today = new Date();
     >
       <Icon name="rss" class="w-5 h-5" />
     </Link>
-  </div>
+  </div> -->
 </footer>
