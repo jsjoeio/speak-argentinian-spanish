@@ -4,27 +4,28 @@
 
 @font-face {
   font-family: "Ranade";
-  src: local("Ranade"),
-    url("/assets/fonts/Ranade-Medium.ttf") format("truetype"),
+  src: local("Ranade Medium"),
+    url("/assets/fonts/Ranade-Medium.woff2") format("woff2"),
     url("/assets/fonts/Ranade-Medium.woff") format("woff"),
-    url("/assets/fonts/Ranade-Medium.woff2") format("woff2");
+    url("/assets/fonts/Ranade-Medium.ttf") format("truetype");
   font-weight: regular;
   font-style: normal;
 }
 @font-face {
   font-family: "Ranade";
-  src: local("Ranade"), url("/assets/fonts/Ranade-Bold.ttf") format("truetype"),
+  src: local("Ranade Bold"),
+    url("/assets/fonts/Ranade-Bold.woff2") format("woff2"),
     url("/assets/fonts/Ranade-Bold.woff") format("woff"),
-    url("/assets/fonts/Ranade-Bold.woff2") format("woff2");
+    url("/assets/fonts/Ranade-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Ranade";
-  src: local("Ranade"),
-    url("/assets/fonts/Ranade-MediumItalic.ttf") format("truetype"),
+  src: local("Ranade Medium Italic"),
+    url("/assets/fonts/Ranade-MediumItalic.woff2") format("woff2"),
     url("/assets/fonts/Ranade-MediumItalic.woff") format("woff"),
-    url("/assets/fonts/Ranade-MediumItalic.woff2") format("woff2");
+    url("/assets/fonts/Ranade-MediumItalic.ttf") format("truetype");
   font-weight: regular;
   font-style: italic;
 }
