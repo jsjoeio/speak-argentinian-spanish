@@ -17,6 +17,6 @@ export const SOCIALS = [
   {
     name: "YouTube",
     url: "https://twitter.com/argentinian_spanish",
-    icon: "mdi:youtube",
+    icon: "ph:youtube-logo-fill",
   },
 ];

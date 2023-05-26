@@ -4,11 +4,14 @@ import { Icon } from "astro-icon";
 import Link from "./ui/Link.astro";
 const today = new Date();
 import { SITE_MISSION, SOCIALS } from "../consts";
+import FooterLinks from "../data/footerLinks";
 ---
 
-<footer class="container py-6 grid gap-8 text-arg-dark">
+<footer
+  class="container py-6 md:py-10 flex flex-wrap gap-8 items-start text-arg-dark justify-between"
+>
   <div class="grid gap-2 max-w-xs">
-    <Icon name="logo-horizontal-no-logomark" class="w-64 sm:w-96" />
+    <Icon name="logo-horizontal-no-logomark" class="w-64 sm:w-80" />
     <p>
       &copy; {today.getFullYear()} Joe Previte <span>
         (<Link
@@ -25,7 +28,7 @@ import { SITE_MISSION, SOCIALS } from "../consts";
       {
         SOCIALS.map((s) => (
           <Link href={s.url} type={"dark"}>
-            <Icon name={s.icon} class="w-6 h-6" />
+            <Icon name={s.icon} class="w-5 h-5" width="24" />
           </Link>
         ))
       }
@@ -40,15 +43,26 @@ import { SITE_MISSION, SOCIALS } from "../consts";
       </Link>
     </div>
   </div>
-  <!-- <div class="flex gap-4 items-center z-10">
-    <Link
-      href="/rss.xml"
-      type={"dark"}
-      underlined={false}
-      classes="text-4xl"
-      aria-label="Subscribe to RSS feed"
-    >
-      <Icon name="rss" class="w-5 h-5" />
-    </Link>
-  </div> -->
+  <div
+    class="flex flex-wrap w-full md:w-auto xs:justify-between gap-6 md:gap-12"
+  >
+    {
+      FooterLinks.map((section) => (
+        <div class="grid gap-2 basis-full xs:basis-auto">
+          <p class="uppercase">
+            <strong>{section.title}</strong>
+          </p>
+          <ul class="grid gap-1">
+            {section.items.map((i) => (
+              <li>
+                <Link href={i.href} type={"dark"}>
+                  {i.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
 </footer>

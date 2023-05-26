@@ -30,6 +30,9 @@ module.exports = {
       maxWidth: {
         heading: "20ch",
       },
+      screens: {
+        xs: "475px",
+      },
     },
   },
   plugins: [require("daisyui"), require("@tailwindcss/typography")],
