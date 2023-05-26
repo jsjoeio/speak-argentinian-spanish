@@ -55,9 +55,15 @@ import FooterLinks from "../data/footerLinks";
           <ul class="grid gap-1">
             {section.items.map((i) => (
               <li>
-                <Link href={i.href} type={"dark"}>
-                  {i.title}
-                </Link>
+                {i.href !== "#" ? (
+                  <Link href={i.href} type={"dark"}>
+                    {i.title}
+                  </Link>
+                ) : (
+                  <p class="cursor-pointer" onclick="alert('Coming soon')">
+                    {i.title}
+                  </p>
+                )}
               </li>
             ))}
           </ul>
