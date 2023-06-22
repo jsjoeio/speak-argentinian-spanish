@@ -34,6 +34,7 @@ Here's the list along with a brief description
 - [Un Mundo Maravilloso](https://open.spotify.com/show/0zGFAX8zeYbDjEX4sC7bbk) - talk show
 - [¿Por qué no te habré hecho caso? con Santiago Siri y Hernán Zin](https://open.spotify.com/show/3uayw7As069jmVEqkA3Ds6?si=6352a5333f304e6a) - crypto
 - [Traé Alfajores](https://open.spotify.com/show/2e9ywcRVRUdwqKckqdEO3j) - Rioplatense Spanish
+- [Spanish with Keilans](https://open.spotify.com/show/2JXVIudtEd7HXJ3IbXqHwu?si=5cbf0e117b2d431a) - Spanish with Keilans
 
 ## How do I contribute?
 
