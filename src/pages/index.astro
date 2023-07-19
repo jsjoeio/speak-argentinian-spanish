@@ -1,34 +1,15 @@
 ---
 import CTA from "../components/CTA.astro";
-import ImageGrid from "../components/ImageGrid.astro";
 import Heading from "../components/ui/Heading.astro";
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Nav from "../components/Nav.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-
-import { Icon } from "astro-icon";
-import Link from "../components/ui/Link.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-const today = new Date();
-
-type Props = {
-  title?: string;
-  description?: string;
-  heroImage?: string;
-};
-
-const {
-  title = SITE_TITLE,
-  description = SITE_DESCRIPTION,
-  heroImage,
-} = Astro.props;
 ---
 
 <BaseLayout>
   <div class="bg-arg-dark h-full">
-    <div class="container">
-
+    <div class="container gap-3 sm:gap-5 py-10 h-full grid content-center">
+      <Heading tag={"h1"} size="h1">Speak Spanish like a <span class="text-arg-blue">native speaker</span></Heading>
+        <p class="max-w-lg sm:text-xl">Every Monday morning, I send a 5-minute newsletter to help your Spanish sound more Argentinian.</p>
+      <CTA source="index-page" />
     </div>
   </div>
 </BaseLayout>
