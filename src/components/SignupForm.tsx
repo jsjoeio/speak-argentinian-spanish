@@ -99,7 +99,7 @@ export function SignupForm({ source }: SignupFormProps) {
             className="flex items-center flex-wrap gap-2"
           >
             <input
-              className="block w-full max-w-xs placeholder:text-arg-white/80 py-2 px-4 rounded-md bg-transparent border-2 border-arg-blue focus:outline-arg-blue"
+              className="block w-full sm:max-w-xs placeholder:text-arg-white/80 py-2 px-4 rounded-md bg-transparent border-2 border-arg-blue focus:outline-arg-blue"
               type="email"
               id="12c97b2c-36a9-4f3f-9afb-8ee39992c2cd"
               name="answers[12c97b2c-36a9-4f3f-9afb-8ee39992c2cd]"
@@ -109,7 +109,7 @@ export function SignupForm({ source }: SignupFormProps) {
               required
             />
             <button
-              className="capitalize text-center bg-arg-white text-black font-bold w-fit px-6 py-2 border-2 border-arg-white rounded-md transition-colors hover:bg-arg-blue focus:outline-transparent focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-arg-gold"
+              className="capitalize text-center bg-arg-white text-black font-bold px-6 py-2 border-2 border-arg-white rounded-md transition-colors hover:bg-arg-blue focus:outline-transparent focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-arg-gold w-full sm:w-fit"
               type="submit"
             >
               Get the newsletter
