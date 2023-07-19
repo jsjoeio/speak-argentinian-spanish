@@ -2,48 +2,32 @@
 import { SignupForm } from "./SignupForm";
 import { WaitlistSection } from "./WaitlistSection";
 const { source } = Astro.props;
+import Image1 from "../assets/waitlist1.jpg";
+import Image2 from "../assets/waitlist2.jpg";
+import Image3 from "../assets/waitlist3.jpg";
+import Image4 from "../assets/waitlist4.jpg";
+import Image5 from "../assets/waitlist5.jpg";
+import Image6 from "../assets/waitlist6.jpg";
+import Image7 from "../assets/waitlist7.jpg";
+import { Image } from "astro:assets";
+const images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7];
 ---
 
 <div class="grid gap-4">
   <SignupForm client:visible source={source} />
   <div class="flex items-center flex-wrap gap-4">
     <div class="flex items-center ml-4">
-      <!-- Since Astro doesn't have dynamic imports, you'll have to manually specify the image URLs -->
-      <img
-        src="/assets/images/waitlist1.jpg"
-        alt=""
-        class="rounded-full border-4 border-arg-dark -ml-4"
-      />
-      <img
-        src="/assets/images/waitlist2.jpg"
-        alt=""
-        class="rounded-full border-4 border-arg-dark -ml-4"
-      />
-      <img
-        src="/assets/images/waitlist3.jpg"
-        alt=""
-        class="rounded-full border-4 border-arg-dark -ml-4"
-      />
-      <img
-        src="/assets/images/waitlist4.jpg"
-        alt=""
-        class="rounded-full border-4 border-arg-dark -ml-4"
-      />
-      <img
-        src="/assets/images/waitlist5.jpg"
-        alt=""
-        class="rounded-full border-4 border-arg-dark -ml-4"
-      />
-      <img
-        src="/assets/images/waitlist6.jpg"
-        alt=""
-        class="rounded-full border-4 border-arg-dark -ml-4"
-      />
-      <img
-        src="/assets/images/waitlist7.jpg"
-        alt=""
-        class="rounded-full border-4 border-arg-dark -ml-4"
-      />
+      {
+        images.map((i) => (
+          <Image
+            src={i}
+            width={50}
+            height={50}
+            alt=""
+            class="rounded-full border-4 border-arg-dark -ml-4"
+          />
+        ))
+      }
     </div>
     <WaitlistSection client:visible />
   </div>
