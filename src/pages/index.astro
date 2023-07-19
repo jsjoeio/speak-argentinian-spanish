@@ -1,85 +1,20 @@
 ---
 import CTA from "../components/CTA.astro";
-import ImageGrid from "../components/ImageGrid.astro";
 import Heading from "../components/ui/Heading.astro";
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Nav from "../components/Nav.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-
-import { Icon } from "astro-icon";
-import Link from "../components/ui/Link.astro";
-const today = new Date();
-
-type Props = {
-  title?: string;
-  description?: string;
-  heroImage?: string;
-};
-
-const {
-  title = SITE_TITLE,
-  description = SITE_DESCRIPTION,
-  heroImage,
-} = Astro.props;
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} image={heroImage} />
-  </head>
-  <body class="bg-arg-blue text-arg-white">
-    <div class="min-h-screen grid grid-rows-auto-1fr-auto">
-      <Nav />
-      <main>
-        <div class="h-full grid content-center">
-          <div class="bg-arg-dark py-8 md:py-12 lg:-mt-20">
-            <div class="container">
-              <div class="flex items-center justify-between">
-                <div class="grid gap-4 sm:gap-8">
-                  <div class="grid gap-2">
-                    <Heading tag={"h1"}>
-                      Speak Spanish like a <span class="text-arg-blue"
-                        >native speaker</span
-                      >
-                    </Heading>
-                    <p class="max-w-lg">
-                      Every Monday morning, I send a 5-minute newsletter to help
-                      your Spanish sound more Argentinian.
-                    </p>
-                  </div>
-                  <CTA source="index-page" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ImageGrid />
-      </main>
-
-      <footer class="container text-center py-6 grid justify-center">
-        <div class="flex gap-4 items-center z-10">
-          <p>
-            &copy; {today.getFullYear()}
-            <Link
-              href="https://twitter.com/joseprevite"
-              type={"dark"}
-              underlined={true}
-            >
-              @joseprevite
-            </Link>
-          </p>
-          <Link
-            href="/rss.xml"
-            type={"dark"}
-            underlined={false}
-            classes="text-4xl"
-            aria-label="Subscribe to RSS feed"
-          >
-            <Icon name="rss" class="w-5 h-5" />
-          </Link>
-        </div>
-      </footer>
+<BaseLayout>
+  <div class="bg-arg-dark h-full">
+    <div class="container gap-3 sm:gap-5 py-10 h-full grid content-center">
+      <Heading tag={"h1"} size="h1">
+        Speak Spanish like a <span class="text-arg-blue">native speaker</span>
+      </Heading>
+      <p class="max-w-lg sm:text-xl">
+        Every Monday morning, I send a 5-minute newsletter to help your Spanish
+        sound more Argentinian.
+      </p>
+      <CTA source="index-page" />
     </div>
-  </body>
-</html>
+  </div>
+</BaseLayout>
