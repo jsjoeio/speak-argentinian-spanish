@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import { About } from "../components/About";
 import FormattedDate from "../components/FormattedDate.astro";
 import BaseLayout from "./BaseLayout.astro";
+import { Image } from "astro:assets";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -16,7 +17,17 @@ const { title, description, date, updatedDate, heroImage } = Astro.props;
         <h1 class="text-4xl font-bold leading-tight sm:text-5xl md:text-7xl">
           {title}
         </h1>
-        {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
+        {
+          heroImage && (
+            <Image
+              width={720}
+              height={360}
+              src={heroImage}
+              quality="mid"
+              alt=""
+            />
+          )
+        }
         <p class="text-sm">
           by
           <a
