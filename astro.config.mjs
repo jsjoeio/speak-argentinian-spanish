@@ -18,6 +18,6 @@ export default defineConfig({
     assets: true,
   },
   integrations: [mdx(), sitemap(), tailwind(), react()],
-  output: "server",
+  output: "hybrid",
   adapter: vercel(),
 });
