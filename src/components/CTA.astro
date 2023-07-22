@@ -1,7 +1,6 @@
 ---
 import { SignupForm } from "./SignupForm";
 import { Image } from "astro:assets";
-import { WaitlistSection } from "./WaitlistSection";
 const { source } = Astro.props;
 import Image1 from "../assets/waitlist1.jpg";
 import Image2 from "../assets/waitlist2.jpg";
@@ -29,6 +28,6 @@ const images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7];
         ))
       }
     </div>
-    <WaitlistSection client:visible />
+    <p>Join 75+ others unlocking Spanish</p>
   </div>
 </div>
