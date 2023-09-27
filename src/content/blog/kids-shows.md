@@ -12,6 +12,8 @@ As a parent of a young child whom I'm raising bilingual, I'm always on the looko
 - [Blippi Español](https://www.youtube.com/@BlippiEspanol) - dubbed show (originally made in US in English) that kids absolutely love
 - [Mundo Zamba](https://www.youtube.com/@mundozamba) - Argentinian kids cartoon show
 - [Pakapaka](https://www.youtube.com/user/CanalPakapaka) - think of this as the PBS of Argentina (content made for kids)
+- [Plaza Sésamo](https://www.youtube.com/@plazasesamo) - Seasame Street but in Spanish
+- [POCOYÓ en ESPAÑOL - Canal Oficial](https://www.youtube.com/@pocoyo) - Animated kids show from Spain 
 - [Spanish Immersion for Babies & Toddlers - with Liz](https://www.youtube.com/@SpanishwithLiz) - this is the Ms.Rachel equivalent in Spanish
 
 If you have more to add to the list, feel free to email joe@speakargentinianspanish.com and I can add them for you!
