@@ -9,7 +9,9 @@ For the last 6 months, I've said, "Okay, I'm going to do it. I'm going to shadow
 
 Why?
 
-Because I'm trying to complicate it too much. It's simple. So I thought, "How can we reduce the friction?" And this is what I came up with - a template for [shadowing](https://www.youtube.com/watch?v=Wc1Xp0K6lvI):
+Because I'm trying to complicate it too much. It's simple. So I thought, "How can we reduce the friction?" And this is what I came up with - a template for [shadowing](https://www.youtube.com/watch?v=Wc1Xp0K6lvI) with a mix of [chorusing](https://www.youtube.com/watch?v=m5JwiNSIHxY).
+
+_In case you're new to "shadowing", it's basically when you imitate another speaker in close-to real-time whereas a similar concept called "chorusing" is similar except you hear a sentence, pause, and then repeat._
 
 ## A Template for Shadowing
 
@@ -27,11 +29,11 @@ _Go to https://www.downloadyoutubesubtitles.com/ -> download the SRT and put her
 
 _Spend 5mins practicing and do 5 sessions_
 
-- [] session 1
-- [] session 2
-- [] session 3
-- [] session 4
-- [] session 5
+- [] session 1 - chorusing
+- [] session 2 - chorusing
+- [] session 3 - half chorusing & half shadowing
+- [] session 4 - shadowing
+- [] session 5 - shadowing
 
 ### A Real Example
 
