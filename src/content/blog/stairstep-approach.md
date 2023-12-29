@@ -29,7 +29,7 @@ Imagine a staircase where each step is a level of comprehension. At the ground f
 
 To get there, we have to go one step at a time starting with easier content and increasing the difficulty incrementally.
 
-![stairstep-approach](https://github.com/jsjoeio/speak-argentinian-spanish/assets/3806031/3cfea27e-dd7c-4c6e-a0d3-b79c80d602f0)
+![stairstep-approach](../../assets/stairstep-approach.png)
 
 Here's the content I suggest starting from least difficult to most difficult:
 
